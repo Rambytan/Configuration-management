@@ -1,0 +1,21 @@
+# Тестирование работы с бинарными файлами
+echo "=== Тестирование бинарных файлов ==="
+
+ls /
+cd binary_files
+ls
+cat data.bin
+cat image.jpg
+
+echo "=== Сравнение с текстовыми файлами ==="
+cd ../text_files
+ls
+cat readme.txt
+
+echo "=== Тестирование mixed content ==="
+cd ../mixed
+ls
+cat config.txt
+cat data.dat
+
+echo "Тестирование бинарных файлов завершено"
