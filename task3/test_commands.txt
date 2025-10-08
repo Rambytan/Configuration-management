@@ -1,0 +1,32 @@
+# Стартовый скрипт для тестирования всех команд эмулятора
+# Тестирование базовых команд
+
+echo "=== Тестирование базовых команд ==="
+ls /
+vfs-info
+
+echo "=== Тестирование навигации ==="
+cd docs
+ls
+cd projects
+ls
+cd src
+ls
+cat main.py
+
+echo "=== Тестирование обработки ошибок ==="
+cd /nonexistent
+ls /invalid_path
+cat unknown_file.txt
+unknown_command
+cd too many arguments
+
+echo "=== Тестирование переменных окружения ==="
+ls $HOME
+echo "Пользователь: $USERNAME"
+
+echo "=== Возврат в корень ==="
+cd /
+ls
+
+echo "=== Тестирование завершено ==="
